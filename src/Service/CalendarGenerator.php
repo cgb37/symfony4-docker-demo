@@ -43,6 +43,9 @@ class CalendarGenerator {
 
 	);
 
+	/**
+	 * @return array
+	 */
 	public function getCalendars() {
 
 		$calendars = $this->_calendars;
@@ -50,6 +53,7 @@ class CalendarGenerator {
 		foreach($calendars as $cal) {
 
 			$calendarId = $cal['id'];
+			//@TODO = needs config var
 			$path = '/Users/cbrownroberts/Dev/LibWeb/symfony-demo/public/calendars/' . $calendarId;
 
 			if( file_exists($path) ) {
@@ -75,9 +79,7 @@ class CalendarGenerator {
 				}
 			}
 		}
-
 		return $items;
-
 	}
 
 

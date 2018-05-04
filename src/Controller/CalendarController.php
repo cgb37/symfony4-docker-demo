@@ -23,8 +23,6 @@ class CalendarController extends Controller
     {
 	    $calendars = $this->_cal_gen->getCalendars();
 
-
-
         return $this->render('calendar/index.html.twig', [
             'controller_name' => 'CalendarController',
 	        'calendars' => $calendars
