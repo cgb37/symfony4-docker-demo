@@ -6,7 +6,26 @@
 
     <div class="container">
         <h1>Calendars</h1>
-        {{ include('calendar/list.html.twig') }}
+
+        <div class="row">
+            <div class="col-lg-9">
+                {{ include('calendar/list.html.twig') }}
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card">
+
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary btn-lg">Update All Calendars</button>
+                        <p class="card-text">By pressing this button all calendar data will be updated.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
     </div>
 
 {% endblock %}
