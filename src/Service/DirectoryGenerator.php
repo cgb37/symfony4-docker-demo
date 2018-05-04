@@ -8,8 +8,16 @@
 // src/Service/DirectoryGenerator.php
 namespace App\Service;
 
+use App\Service\LogGenerator;
+
 class DirectoryGenerator
 {
+
+	private $_logger;
+
+	public function __construct(LogGenerator $logger) {
+		$this->_logger = $logger->getLogger();
+	}
 
 	public function getHappyMessage()
 	{
@@ -19,9 +27,28 @@ class DirectoryGenerator
 			'Great work! Keep going!',
 		];
 
+
+
 		$index = array_rand($messages);
 
+		$this->_logger->info( $messages[$index]);
+
 		return $messages[$index];
+	}
+
+
+	public function dirExists($directory) {
+
+	}
+
+
+	public function makeDir($directory) {
+
+	}
+
+
+	public function destroyDir($directory) {
+
 	}
 
 }
