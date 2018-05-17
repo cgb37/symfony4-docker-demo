@@ -54,9 +54,10 @@ class CalendarGenerator {
 
 			$calendarId = $cal['id'];
 			//@TODO = needs config var
-			$path = '/Users/cbrownroberts/Dev/LibWeb/symfony-demo/public/calendars/' . $calendarId;
+			$path = '/var/www/html/public/calendars/' . $calendarId;
 
 			if( file_exists($path) ) {
+
 
 				if( is_dir($path) ) {
 

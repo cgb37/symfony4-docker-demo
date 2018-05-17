@@ -33,7 +33,7 @@ class LuckyController extends Controller
 
 		$this->addFlash(
 			'notice',
-			'Your changes were saved!'
+			'Your changes were saved and logged!'
 		);
 
 		$this->_logger->info('Your lucky number is: '. $number);
