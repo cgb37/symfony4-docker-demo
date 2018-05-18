@@ -8,15 +8,18 @@
 // src/Service/DirectoryGenerator.php
 namespace App\Service;
 
-#use App\Service\LogGenerator;
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 class DirectoryGenerator
 {
 
 	private $_logger;
+	private $_filesystem;
 
-	public function __construct(LogGenerator $logger) {
-		$this->_logger = $logger->getLogger();
+	public function __construct(LoggerInterface $logger) {
+		$this->_logger = $logger;
 	}
 
 	public function getHappyMessage()
@@ -43,6 +46,14 @@ class DirectoryGenerator
 
 
 	public function makeDir($directory) {
+		$fileSystem = new Filesystem();
+
+
+		try {
+			$fileSystem->mkdir('/var/www/html/public/calendars/'.$directory);
+		} catch (IOExceptionInterface $exception) {
+			$this->_logger->error("An error occurred while creating your directory at ".$exception->getPath());
+		}
 
 	}
 
@@ -50,5 +61,6 @@ class DirectoryGenerator
 	public function destroyDir($directory) {
 
 	}
+
 
 }

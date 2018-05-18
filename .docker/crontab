@@ -1,3 +1,3 @@
-0 * * * * root sh /usr/local/bin/test.sh
-#0 * * * * root /usr/local/bin/php /usr/local/bin/write-calendar-json.php
+SYMFONY_ENV=prod
+* * * * * root /usr/local/bin/php /var/www/html/bin/console app:sunshine >> /var/www/html/var/log/error.log
 # An empty line is required at the end of this file for a valid cron file.

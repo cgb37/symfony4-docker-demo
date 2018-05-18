@@ -8,6 +8,9 @@
 // src/Service/CalendarGenerator.php
 namespace App\Service;
 
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 
 
@@ -42,6 +45,14 @@ class CalendarGenerator {
 		]
 
 	);
+
+	private $_logger;
+	private $_filesystem;
+
+	public function __construct(LoggerInterface $logger) {
+		$this->_logger = $logger;
+		$this->_filesystem = new Filesystem();
+	}
 
 	/**
 	 * @return array
@@ -81,6 +92,17 @@ class CalendarGenerator {
 			}
 		}
 		return $items;
+	}
+
+	public function makeCalendarDirectoriesAndFiles($directory) {
+
+		try {
+			$this->_filesystem->mkdir('/var/www/html/public/calendars/'.$directory);
+		} catch (IOExceptionInterface $exception) {
+			$this->_logger->error("An error occurred while creating your directory at ".$exception->getPath());
+		}
+
+
 	}
 
 

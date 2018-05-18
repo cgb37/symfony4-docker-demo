@@ -20,8 +20,14 @@ class DirectoryController extends Controller
     public function index()
     {
     	$this->_dir_gen->getHappyMessage();
+
+
+    	$directory = mt_rand();
+    	$this->_dir_gen->makeDir($directory);
+
         return $this->render('directory/index.html.twig', [
             'controller_name' => 'DirectoryController',
+	        'new_directory' => $directory
         ]);
     }
 }

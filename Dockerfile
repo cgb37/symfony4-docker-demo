@@ -72,7 +72,8 @@ RUN chmod u+x /usr/local/bin/init.sh
 # Copy public facing pages
 COPY . /var/www/html/
 
-
+# make scripts executable
+RUN chmod -R u+x /var/www/html/bin
 
 ## Copy sh test file
 #COPY ./bin/  /usr/local/bin/
