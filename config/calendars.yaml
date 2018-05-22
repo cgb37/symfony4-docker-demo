@@ -1,0 +1,62 @@
+architecture:
+  id: architecture
+  name: Architecture Library
+  directoryName: architecture
+  attributeName: architecture
+  googleCalendarId: 0tfb9u353ci66sccinqksnolak@group.calendar.google.com
+
+business:
+  id: business
+  name: Business Library
+  directoryName: business
+  attributeName: business
+  googleCalendarId: 0lv6crulncibbjbd87l7qq2c8k@group.calendar.google.com
+
+chc:
+  id: chc
+  name: Cuban Heritage Collection
+  directoryName: chc
+  attributeName: chc
+  googleCalendarId: t1a4jjojmr0kt527q5189ocoak@group.calendar.google.com
+
+kislak:
+  id: kislak
+  name: Kislak Center
+  directoryName: kislak
+  attributeName: kislak
+  googleCalendarId: nsi9ljune74t00ilfrdhfrlv24@group.calendar.google.com
+
+musiclib:
+  id: musiclib
+  name: Music Library
+  directoryName: musiclib
+  attributeName: musiclib
+  googleCalendarId: hq13o4vhet5bkjscfgsigjh2cc@group.calendar.google.com
+
+richter:
+  id: richter
+  name: Richter Library
+  directoryName: richter
+  attributeName: richter
+  googleCalendarId: umlhours@gmail.com
+
+rsmaslib:
+  id: rsmaslib
+  name: RSMAS Library
+  directoryName: rsmaslib
+  attributeName: rsmaslib
+  googleCalendarId: 1oe3ukr8p3j3icp7ucljq15ot8@group.calendar.google.com
+
+specialcollections:
+  id: specialcollections
+  name: Special Collections
+  directoryName: specialcollections
+  attributeName: specialcollections
+  googleCalendarId: or5psdljmhdqhrnv9k00iuni5c@group.calendar.google.com
+
+universityarchives:
+  id: universityarchives
+  name: University Archives
+  directoryName: universityarchives
+  attributeName: universityarchives
+  googleCalendarId: om435upp2tm3cdss3hmbe51vkk@group.calendar.google.com

@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dashboard{% endblock %}
+{% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
 
     <div class="container">
-        <h1>Dashboard</h1>
+        <h1>Calendars</h1>
 
         <div class="row">
             <div class="col-lg-9">
-                <h2>Calendars</h2>
                 {{ include('calendar/list.html.twig') }}
             </div>
 

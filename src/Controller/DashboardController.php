@@ -5,17 +5,18 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use App\Service\CalendarGenerator;
+use App\Service;
 
 class DashboardController extends Controller
 {
     /**
      * @Route("/dashboard", name="dashboard")
      */
-    public function index(CalendarGenerator $calendar_generator)
+    public function index()
     {
 
-    	$calendars = $calendar_generator->getCalendars();
+	    $hours_gen = new Service\HoursGenerator();
+	    $calendars = $hours_gen->getCalendars();
 
 
 

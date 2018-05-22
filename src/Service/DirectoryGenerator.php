@@ -30,8 +30,6 @@ class DirectoryGenerator
 			'Great work! Keep going!',
 		];
 
-
-
 		$index = array_rand($messages);
 
 		$this->_logger->info( $messages[$index]);

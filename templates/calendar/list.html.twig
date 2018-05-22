@@ -1,28 +1,28 @@
 <div class="accordion" id="accordionExample">
     {% for cal in calendars %}
-    <div class="card">
-        <div class="card-header" id="heading_{{ cal.id }}">
-            <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_{{ cal.id }}" aria-expanded="true" aria-controls="collapseOne">
-                    {{ cal.name }}
-                </button>
-            </h5>
-        </div>
+        <div class="card">
+            <div class="card-header" id="heading_{{ cal.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_{{ cal.id }}" aria-expanded="true" aria-controls="collapseOne">
+                        {{ cal.name }}
+                    </button>
+                </h5>
+            </div>
 
-        <div id="collapse_{{ cal.id }}" class="collapse" aria-labelledby="heading_{{ cal.id }}" data-parent="#accordionExample">
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">name: {{ cal.name }}</li>
-                    <li class="list-group-item">attributeName: {{ cal.attributeName }}</li>
-                    <li class="list-group-item">directoryName: {{ cal.directoryName }}</li>
-                    <li class="list-group-item">googleCalendarId: {{ cal.googleCalendarId }}</li>
-                    <li class="list-group-item"><a href="/calendars/{{ cal.id }}/{{ cal.calendar }}" target="_blank">Google Calendar Json</a></li>
-                    <li class="list-group-item"><a href="/calendars/{{ cal.id }}/{{ cal.events }}" target="_blank">Events Json</a></li>
-                    <li class="list-group-item"><a href="/calendars/{{ cal.id }}/{{ cal.today }}" target="_blank">Today Json</a></li>
-                </ul>
+            <div id="collapse_{{ cal.id }}" class="collapse" aria-labelledby="heading_{{ cal.id }}" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">name: {{ cal.name }}</li>
+                        <li class="list-group-item">attributeName: {{ cal.attributeName }}</li>
+                        <li class="list-group-item">directoryName: {{ cal.directoryName }}</li>
+                        <li class="list-group-item">googleCalendarId: {{ cal.googleCalendarId }}</li>
+                        <li class="list-group-item"><a href="/calendars/{{ cal.directoryName }}/calendar.json" target="_blank">Google Calendar Json</a></li>
+                        <li class="list-group-item"><a href="/calendars/{{ cal.directoryName }}/events.json" target="_blank">Events Json</a></li>
+                        <li class="list-group-item"><a href="/calendars/{{ cal.directoryName }}/today.json" target="_blank">Today Json</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
     {% else %}
         No entries available
